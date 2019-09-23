@@ -29,17 +29,13 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Value Proposition
+            ## Whitch team will win the next round of CS:GO?
 
-            Emphasize how the app will benefit users. Don't emphasize the underlying technology.
-
-            ✅ RUN is a running app that adapts to your fitness levels and designs personalized workouts to help you improve your running.
-
-            ❌ RUN is the only intelligent running app that uses sophisticated deep neural net machine learning to make your run smarter because we believe in ML driven workouts.
+            Built on top of the world's best CS:GO players, we can use machine learning to determine who will win the next round of a CS:GO series, with an associated level of confidence!
 
             """
         ),
-        dcc.Link(dbc.Button('Call To Action', color='primary'), href='/predictions')
+        dcc.Link(dbc.Button('Let me play with the model!', color='primary'), href='/predictions')
     ],
     md=4,
 )
