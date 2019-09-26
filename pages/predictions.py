@@ -6,6 +6,10 @@ from dash.dependencies import Input, Output
 
 from app import app
 
+from joblib import load
+pipeline = load('assets/pipeline.joblib')
+
+
 column1 = dbc.Col(
     [
         dcc.Markdown(
