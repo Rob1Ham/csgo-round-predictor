@@ -29,24 +29,48 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Whitch team will win the next round of CS:GO?
+            ## Who wins the next round of CS:GO?
 
-            Built on top of the world's best CS:GO players, we can use machine learning to determine who will win the next round of a CS:GO series, with an associated level of confidence!
+            I've built a machine learning model that better predicts the probability a team will win the next round of CS:GO.
+            I've written a blog post detailing on how my model works, and have deployed an interactive version of the predictor for you to try yourself!
 
             """
         ),
-        dcc.Link(dbc.Button('Let me play with the model!', color='primary'), href='/predictions')
+            dcc.Markdown("_______"
+        ),
+        html.Div(
+    [
+        dcc.Link(dbc.Button('Read the blog', color='primary'), href='/predictions'),
+        dcc.Link(dbc.Button('Use Round Predictor', color='danger'), href='/predictions'),
+    ]
+),
+        
+            dcc.Markdown("_______"
+        ),
+                dcc.Markdown(
+        ),
+        
+        
+        dcc.Markdown(
+            """
+        
+            I personally scraped this data across 1,200 demo files from all of the CS:GO Majors and their qualifiers. I've aggregated the highlights of each match into a JSON and have published the dataset to Kaggle if you'd like to build your own model or explore the data further!
+
+            Thank you to HLTV.org for hosting the raw demo files, and CS:GO Demo Manager for streamlining the data export process.    
+
+            """
+        ),        
+                    dcc.Markdown("_______"
+        ),
+        dcc.Link(dbc.Button('Raw Data', color='primary'), href='/predictions'),
+        
     ],
     md=4,
 )
 
-gapminder = px.data.gapminder()
-fig = px.scatter(gapminder.query("year==2007"), x="gdpPercap", y="lifeExp", size="pop", color="continent",
-           hover_name="country", log_x=True, size_max=60)
-
 column2 = dbc.Col(
     [
-        dcc.Graph(figure=fig),
+        html.Img(src='assets/csgo-boxart', className='img-thumbnail')
     ]
 )
 
