@@ -95,7 +95,7 @@ def update_image_src(value):
 @app.callback(
     dash.dependencies.Output('image', 'src'),
     [dash.dependencies.Input('map_name', 'value')])
-def update_image_src(value):
+def update_image_src2(value):
     return static_image_route + value + map_extension
 
 
@@ -148,7 +148,7 @@ def predict(round, equipment_value_team_t, equipment_value_team_ct,ct_score_LR,t
             Input('map_name', 'value')]
           )
 
-def predict(round, equipment_value_team_t, equipment_value_team_ct,ct_score_LR,t_score_LR,map_name):
+def predict1(round, equipment_value_team_t, equipment_value_team_ct,ct_score_LR,t_score_LR,map_name):
     df = pd.DataFrame(
         columns=['round', 'equipment_value_team_t', 'equipment_value_team_ct',
        'ct_score_LR', 't_score_LR', 'map_name'], 
