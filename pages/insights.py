@@ -22,9 +22,9 @@ column1 = dbc.Col(
             The highlight JSONs are broken out by Event and Round of the Event the match took place in. There are just over 1,200 matches available to use for analysis. If you use the data for any analysis let me know, I'd love to see it! 
             """
         ),
-        dcc.Link(dbc.Button('CS:GO Demso Manager', color='primary'), href='https://csgo-demos-manager.com/',className='mr-3'),
-        dcc.Link(dbc.Button('HLTV.org', color='primary'), href='https://hltv.org',className='mr-3'),
-        dcc.Link(dbc.Button('Kaggle Dataset', color='primary'), href='https://kaggle.com',className='mr-3'),
+        dcc.Link(dbc.Button('CS:GO Demso Manager', color='primary'), href='https://www.csgo-demos-manager.com/',className='mr-3'),
+        dcc.Link(dbc.Button('HLTV.org', color='primary'), href='https://www.hltv.org',className='mr-3'),
+        dcc.Link(dbc.Button('Kaggle Dataset', color='primary'), href='https://www.kaggle.com',className='mr-3'),
     ],
     md=12,
 )

@@ -40,7 +40,7 @@ column1 = dbc.Col(
         ),
         html.Div(
     [
-        dcc.Link(dbc.Button('Read the blog', color='primary'), href='/predictions',className='mr-3'),
+        dcc.Link(dbc.Button('Read the blog', color='primary'), href='/process',className='mr-3'),
         dcc.Link(dbc.Button('Use the Predictor!', color='danger'), href='/predictions'),
     ]
 ),
@@ -62,7 +62,7 @@ column1 = dbc.Col(
         ),        
                     dcc.Markdown("_______"
         ),
-        dcc.Link(dbc.Button('Raw Data', color='primary'), href='/predictions'),
+        dcc.Link(dbc.Button('Raw Data', color='primary'), href='/gathering'),
         
     ],
     md=4,
