@@ -18,9 +18,9 @@ column1 = dbc.Col(
         
             ## Background ##
 
-            *I'll try to keep all videogame domain knowledge to this two short paragraphs, if you're not familiar with Counter Strike, this first paragraph should provide enough context to demonstrate the insights generated.*
+            *I'll try to keep all videogame domain knowledge to these two short paragraphs, if you're not familiar with Counter Strike, this first paragraph should provide enough context to demonstrate the insights generated.*
 
-            *Counterstrike:Global Offensive (CS:GO for short) is a competitive First Person Shooter popular on PC. The game consists of two teams: Terrorists, and Counter Terrorists. The Terrorists are given a bomb to plant on the Counter Terrorists side of the map, the Counter Terrorists try to stop this. You can play in a vareity of enviornments (called maps) which each have their own nuanes.*
+            *Counterstrike:Global Offensive (CS:GO for short) is a competitive First Person Shooter popular on PC. The game consists of two teams: Terrorists, and Counter Terrorists. The Terrorists are given a bomb to plant on the Counter Terrorists side of the map, the Counter Terrorists try to stop this. You can play in a vareity of enviornments (called maps) which each have their own nuances.*
 
             *A round in CS:GO starts with a buy period, where each team can use money they acquired to buy better weapons, grenades, and equipment. Money is earned a few ways, killing opponents the previous round, achieving your team's objective the previous rouns, and bonuses if your team loses consecutive rounds in a row.* **If you are not killed the previous round, you get to keep your equipment in the next round** *In competitive CS:GO, teams play a first 16. 15 rounds are played as one team, and then you swap sides to have symetry with your oponent.*
 
@@ -182,7 +182,7 @@ dcc.Markdown("""
 
 dcc.Markdown("""  
             ## SHAP File
-            Fianlly, to provide the breadown of how an individual prediction if generated, we can use SHAP files to deconstruct the black box of XGBoost. First, I am taking an example round from the Test Set (Starladder Berlin). There is one element to note from the Dataset.
+            Fianlly, to provide the breadown of how an individual prediction if generated, we can use SHAP files to deconstruct the black box of XGBoost. First, I am taking an example round from the Test Set (Starladder Berlin).
 """),
 
              dash_table.DataTable(
@@ -215,6 +215,10 @@ dcc.Markdown("""
             """
         ,style = {'text-align': 'center'}
         ),
+                                         dcc.Markdown("____",style = {'margin-bottom': '20px'}
+        ),
+                                         dcc.Markdown("____",style = {'margin-bottom': '20px'}
+        ),
 
 dcc.Markdown("""  
             As seen in the print statement, there is an expected value of -0.15, this is because of the class imbalance noted previously, where the condition for winner to equal 1 (Terrorist win) occurs 48% of the time.
@@ -223,6 +227,10 @@ dcc.Markdown("""
 
             We can see from the Shap values, the model is extremly confident that the Terrorists will win. They are up 4-0, have a signifigant gear advantage, it is their game to lose.
 """),
+                                 dcc.Markdown("____",style = {'margin-bottom': '20px'}
+        ),
+                                         dcc.Markdown("____",style = {'margin-bottom': '20px'}
+        ),
 dcc.Markdown("""  
             # So. What Happens?
                 Let us take a look."""),
